@@ -19,6 +19,11 @@ public class Transaction {
     @Field("Per Unit Price")
     private Double perUnitPrice;
 
+    private String duplicateCount;
+
+    public String getDuplicateCount() {
+        return duplicateCount;
+    }
 
     public int getQuantitySold() {
         return quantitySold;
