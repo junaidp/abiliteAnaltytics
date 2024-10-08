@@ -2,7 +2,10 @@ package com.demoapplication.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
+import java.util.List;
 
 
 @Document(collection = "Transaction_Data")
@@ -12,7 +15,9 @@ public class Transaction {
     private String id;
     @Field("count")
     private int count;
+    @Field("Order ID")
     private int orderId;
+    @Field("Customer ID")
     private int customerId;
     @Field("Quantity Sold")
     private Integer quantitySold;
