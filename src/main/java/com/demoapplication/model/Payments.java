@@ -17,6 +17,13 @@ public class Payments {
     @Field("Due Date")
     private Date dueDate;
 
+    @Field("Transaction Amount")
+    private Date transactionAmount;
+
+    public Date getTransactionAmount() {
+        return transactionAmount;
+    }
+
     public String getId() {
         return id;
     }
