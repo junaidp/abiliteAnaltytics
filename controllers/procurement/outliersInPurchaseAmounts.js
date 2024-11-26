@@ -92,10 +92,7 @@ const outliersInPurchaseAmounts = async (_, res) => {
       ])
       .toArray();
 
-    res.status(200).json({
-      message: "Fetched outliers in purchase amounts successfully",
-      data: results,
-    });
+    res.status(200).json(results);
   } catch (error) {
     console.error("Error fetching outliers in purchase amounts:", error);
     res.status(500).json({

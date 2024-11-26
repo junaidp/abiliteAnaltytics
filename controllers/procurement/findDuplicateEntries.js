@@ -31,6 +31,7 @@ const findDuplicateEntries = async (_, res) => {
             Purchase_Order_ID: "$_id.Purchase_Order_ID",
             DuplicateCount: 1,
             Status: { $literal: "Duplicate" },
+            _id: 0,
           },
         },
         {

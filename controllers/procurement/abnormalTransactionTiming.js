@@ -39,6 +39,7 @@ const abnormalTransactionTiming = async (_, res) => {
         },
         {
           $project: {
+            _id: 0,
             Year: "$_id.Year",
             Month: "$_id.Month",
             TotalTransactions: 1,

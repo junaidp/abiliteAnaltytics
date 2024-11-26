@@ -45,10 +45,7 @@ const vendorCreditLimitViolations = async (_, res) => {
       ])
       .toArray();
 
-    res.status(200).json({
-      message: "Fetched vendor credit limit violations successfully",
-      data: results,
-    });
+    res.status(200).json(results);
   } catch (error) {
     console.error("Error fetching vendor credit limit violations:", error);
     res.status(500).json({

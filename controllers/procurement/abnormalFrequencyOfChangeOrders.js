@@ -47,6 +47,7 @@ const abnormalFrequencyOfChangeOrders = async (_, res) => {
         },
         {
           $project: {
+            _id: 0,
             Project_ID: "$ChangeOrderCounts.Project_ID",
             ChangeOrderCount: "$ChangeOrderCounts.ChangeOrderCount",
             AverageChangeOrderCount: "$AverageChangeOrderCount",

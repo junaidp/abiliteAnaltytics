@@ -92,6 +92,7 @@ const abnormalTrendsInWarrantyClaims = async (_, res) => {
             PrevMonthClaimCount: 1,
             PercentChange: { $round: ["$PercentChange", 2] },
             Trend: 1,
+            _id: 0,
           },
         },
         {

@@ -12,7 +12,6 @@ const abnormalProcurementLogins = async (_, res) => {
         {
           $project: {
             AccountID: 1,
-            LoginTime: 1,
             LoginHour: { $hour: "$Login_Time" },
             LoginMinute: { $minute: "$Login_Time" },
             LoginSecond: { $second: "$Login_Time" },
@@ -32,12 +31,6 @@ const abnormalProcurementLogins = async (_, res) => {
         {
           $project: {
             AccountID: 1,
-            LoginTime: {
-              $dateToString: {
-                format: "%Y-%m-%d %H:%M:%S",
-                date: "$Login_Time",
-              },
-            },
             Status: { $literal: "Login Outside Business Hours" },
           },
         },

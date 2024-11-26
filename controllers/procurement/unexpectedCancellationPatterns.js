@@ -40,6 +40,7 @@ const unexpectedCancellationPatterns = async (_, res) => {
                 0,
               ],
             },
+            _id: 0, // Remove _id
           },
         },
       ])
@@ -71,11 +72,7 @@ const unexpectedCancellationPatterns = async (_, res) => {
       .filter((data) => data.CancellationFlag !== null)
       .sort((a, b) => a.OrderYear - b.OrderYear || a.OrderMonth - b.OrderMonth);
 
-    res.status(200).json({
-      message:
-        "Fetched unexpected patterns in order cancellation rates successfully",
-      data: results,
-    });
+    res.status(200).json(results);
   } catch (error) {
     console.error(
       "Error fetching unexpected patterns in order cancellation rates:",

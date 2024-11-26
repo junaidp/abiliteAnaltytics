@@ -20,10 +20,7 @@ const inactiveVendorTransactions = async (_, res) => {
       })
       .toArray();
 
-    res.status(200).json({
-      message: "Fetched inactive vendor transactions successfully",
-      data: results,
-    });
+    res.status(200).json(results);
   } catch (error) {
     console.error("Error fetching inactive vendor transactions:", error);
     res.status(500).json({
